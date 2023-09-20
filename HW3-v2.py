@@ -43,7 +43,7 @@ class CootieCatcher():
     # for answer list ["Definitely", "Most likely", "It is certain", "Maybe", "Cannot predict now", "Very doubtful", "Don't count on it", "Absolutely not"], 
     # it should return a string, "["Definitely", "Most likely", "It is certain", "Maybe", "Cannot predict now", "Very doubtful", "Don't count on it", "Absolutely not"]"
     def __str__(self):
-        return self.answers_list
+        return ','.join(self.answers_list)
 
     # Create the get_fortune method
     # Argument: self (the curent object)
