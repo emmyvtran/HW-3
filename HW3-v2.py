@@ -55,7 +55,11 @@ class CootieCatcher():
     # and asks for another number.
     # if pick is in nums, it adds pick to the answers_history_list and returns the answer at that index from answers_list.
     def get_fortune(self, nums, pick):
-        pass 
+        if pick not in nums:
+            print("That number is not one you can choose! Please try again")
+        else:
+            self.answers_history_list.append(self.answers_list[pick])
+            return self.answers_list[pick]
 
     # Create the ask method 
     # Arguments: self (the curent object)
@@ -70,7 +74,7 @@ class CootieCatcher():
     #   Prompts the user to “Pick a number - <numbers from appropriate list here>: “ 
     #   Returns the answer from the get_fortune method.
     def ask(self, question):
-        pass 
+        
 
     # Create the print_question_history method
     # Argument: self (the curent object)
