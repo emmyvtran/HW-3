@@ -74,7 +74,23 @@ class CootieCatcher():
     #   Prompts the user to “Pick a number - <numbers from appropriate list here>: “ 
     #   Returns the answer from the get_fortune method.
     def ask(self, question):
-        
+        if question in self.questions_history_list:
+            print("I've already answered that question")
+        else:
+            self.questions_history_list.append(question)
+            favorite_color = input("What is your favorite color?")
+            if len(favorite_color) % 2 == 0:
+                num_list = self.num1_list
+            else:
+                num_list = self.num2_list
+            while True:
+                try:
+                    pick = int(input(f"Pick a number - {num_list}: "))
+                    fortune = self.get_fortune(num_list, pick)
+                    return fortune
+                except:
+                    print("That number is not one you can choose! Please try again")
+
 
     # Create the print_question_history method
     # Argument: self (the curent object)
