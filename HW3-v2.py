@@ -100,7 +100,13 @@ class CootieCatcher():
     # Otherwise, 
     # the method prints "<number> <question> - <answer>" for each of the values in the questions_history_list, each on a separate line.
     def print_question_history(self):
-        pass
+        if not self.answers_history_list:
+            print("None yet")
+        else:
+            for i in range(len(self.questions_history_list)):
+                question = self.questions_history_list[i]
+                answer = self.answers_history_list[i]
+                print(f"{i+1} {question} - {answer}")
                     
 def main():
 
