@@ -109,7 +109,18 @@ class CootieCatcher():
                 print(f"{i+1} {question} - {answer}")
                     
 def main():
+    answers = ['Definitely', 'Most likely', 'it is certain', 'Maybe', 'Cannot predict now', 'Very doubtful', "Don't count on it", 'Absolutely now']
+    nums1 = [1, 3, 5, 6]
+    nums2 = [0, 2, 4, 7]
+    cootie_catcher = CootieCatcher(answers, num1s, num2s)
 
+    while True:
+        question = input('Ask a question or type quit:')
+        if question.lower == 'quit':
+            break
+        else:
+            response = cootie_catcher.ask(question)
+            print(f"{question} = {response}")
     # define the list of 8 possible answers
 
     # define the first list of numbers from 0 - 7 inclusive 
@@ -124,7 +135,7 @@ def main():
     # show the output of print_question_history 
 
     # remove pass when you write code above
-    pass
+    
 
 
 # Only run the main function if this file is being run (not imported)
@@ -132,5 +143,5 @@ if __name__ == "__main__":
     main()
     # test() #TODO: Uncomment if you do the extra credit
   
-CootieCatcher(answers, num1s, num2s)
+
 
