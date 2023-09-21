@@ -1,15 +1,10 @@
-# Your name: 
-# Your student id:
-# Your email:
+# Your name: Emmy Tran
+# Your student id: 71422721
+# Your email: emmytran@umich.edu
 # Who or what you worked with on this homework (including generative AI like ChatGPT):
 # If you worked with generative AI also add a statement for how you used it.  
 # e.g.: 
 # Asked Chatgpt hints for debugging and suggesting the general sturcture of the code
-
-answers = ["red", "blue", "yellow", "green", "purple", "orange", "pink", "black"]
-num1s = [0, 2, 5, 6]
-num2s = [1, 3, 4, 6]
-
 
 
 # Create the class CootieCatcher
@@ -112,7 +107,7 @@ def main():
     answers = ['Definitely', 'Most likely', 'it is certain', 'Maybe', 'Cannot predict now', 'Very doubtful', "Don't count on it", 'Absolutely now']
     nums1 = [1, 3, 5, 6]
     nums2 = [0, 2, 4, 7]
-    cootie_catcher = CootieCatcher(answers, num1s, num2s)
+    cootie_catcher = CootieCatcher(answers, nums1, nums2)
 
     while True:
         question = input('Ask a question or type quit:')
